@@ -1,0 +1,212 @@
+.header {
+    display: flex;          /*esnek kutu,kullanılacak alana öğeleri en iyi şekilde yerleştirir*/  
+    flex-direction:row;         /* kutuları soldan sağa sıralar */
+    justify-content:flex-end;   /* elemanlar sfnın sonundan başlayarak dizilir */
+    list-style-type: none;      /*liste noktalarını kaldırdık*/
+    margin: 20px;
+    margin-right:14px;
+    overflow: hidden;                        /* taşan içerik kırpılır ve görünmez */
+    font-family: arial;
+    font-size: 13px;
+
+}
+
+.header .pic-headerli img {
+    border-radius: 50%;                      /*köşeleri yuvarlak yapmak için*/
+    width: 32px;  
+}
+
+.pic-headerli img:hover {
+    border: 5px solid #ebe9e9;
+}
+
+.headerli img:hover {
+    border: 10px solid #ebe9e9;
+    border-radius: 50%;
+}
+
+ .header li a {
+    color: black;
+    text-decoration: none;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+/* :hover---Seçici ile işaretlenen etiketin üzerine mouse ile gelindiğinde CSS uygulanır ve mouse üzerinde değilken etki kaybolur. */
+
+.container {
+    text-align: center;
+    margin:110px auto 19px;
+}
+
+.search-area {
+    background: #fff;
+    display: flex;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    border-radius: 24px;
+    z-index: 3;
+    height: 44px;
+    margin: 0px auto 0px ;
+    width: auto;
+    max-width: 584px;
+}
+
+.search-area:hover {
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.24), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+  }
+
+.search {
+    flex: 1;                   /* flex= "flex-grow, flex-shrink,flex-basis" dolayısıyla burada flex-grow:1  flex-grow kutu genişliğini büyütmek için */
+    display: flex;
+    padding: 5px 8px 0 16px;
+    padding-left: 14px;
+}
+
+.search-img {
+    display: flex;
+    align-items: center;      /*dikey eksende hizalama */
+    padding-right: 13px;
+    margin-bottom: 5px;   
+    
+}
+
+.search-img span {
+    color: #9aa0a6;
+    fill: currentColor;
+    height: 20px;
+    width: 20px;
+    margin-top: 0px;
+    display: inline-block;
+    line-height: 24px;
+    position: relative;          /*normal akış içinde  top, right, bottom ve left konumlandırma özellikleri kullanılabilir */
+    
+}
+
+.input-enter {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;   /* İki veya daha fazla satırda esnek kutular soldan sağa sıralanır. */
+}
+
+.input-area {
+    color: transparent;
+    flex: 100%;
+    white-space: pre;   /* metni olduğu gibi yansıtır */
+    font: 16px arial, sans-serif;
+    line-height: 34px;
+    height: 34px !important;     /*!important------etkinliği arttırır*/
+    display:block;
+}
+
+.voice-search img {
+    height: 24px;
+    width: auto;
+    position: relative;
+    margin-top: 5px;
+    margin-right: 5px;
+    cursor: pointer;     /* fare imlecini eldivenli el olarak tanımlar */
+}
+
+.input {
+    margin: 0;
+    padding: 0;
+    width: 480px;
+    border: none;
+    color: rgba(0, 0, 0, 0.87);
+    word-wrap: break-word;   /*kapsayıcı eleman sınırlarını aşan uzun kelimelerin bir sonraki satırdan devam etmesini sağlar*/ 
+    outline: none;
+    display: flex;
+    flex: 100%;
+    margin-top: -68px;
+    font: 16px arial, sans-serif;
+    line-height: 34px;
+    height: 34px !important;
+    text-rendering: auto;        /*metin taramayı(hız,okunabilirlik,geometrik hassasiyet bakımından) tarayıcıya bırak*/
+    letter-spacing: normal;      /*harfler arasındaki boşluk */
+    word-spacing: normal;
+    text-transform: none;     /*metni büyük-küçük harfe çevirmek için kullanılır*/
+    text-indent: 0px;         /*Paragrafların ilk cümlelerin soldan içeriye kaydırılması için*/
+    text-shadow: none;        /*metinlere gölge vermek için*/
+    text-align: start;        /*elementin diğerlerine göre hizasını belirlemek için */
+    appearance: textfield;
+    cursor: text;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;       /*öğeler arasına boşluk verme*/
+}
+
+.buttons a button {
+    border: 1px #f2f2f2;
+    font-family: Arial, sans-serif;
+    color: #5f6368;
+    font-size: 14px;
+    height: 36px;
+    background-color: #f8f9fa;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.24), 0 2px 5px 0 rgba(0, 0, 0, 0.19); 
+    /* box-shadow----kutulara gölge vermek için */
+}
+
+.buttons a button:hover {
+    border: 1px solid #cac8c8;
+  }
+  
+  .googlesearch {
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;       /*bir öğenin metninin seçilip seçilmeyeceğini belirler */
+  }
+  
+  .feelinglucky {
+    padding: 0 16px;
+    line-height: 27px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .footer {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #dfe1e5;
+    border-top: 1px solid #dadce0;
+    background-color: #f2f2f2;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-left: -8px;
+    line-height: 10px;
+  }
+  
+  .footerli {
+    float: left;
+    list-style: none;
+  }
+  
+  .footerli a {
+    display: block;
+    color: #70757a;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    margin-left: 14px;
+    margin-right: -20px;
+  }
+  
+  .footerli a:hover {
+    text-decoration: underline;
+  }
